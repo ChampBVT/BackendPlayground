@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type CreateArticleDto {
+  id: String!
+  title: String!
+  content: String!
+  number: Float!
+}
+
+type Query {
+  getArticles: [CreateArticleDto!]!
+  findArticle(query: String!): [CreateArticleDto!]!
+}
+
+type Mutation {
+  createArticle(article: inputArticle!): CreateArticleDto!
+}
+
+input inputArticle {
+  title: String!
+  content: String!
+  number: Float!
+}
